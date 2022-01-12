@@ -1,0 +1,15 @@
+.showfeed__parent{
+    width: 95%;
+    height: 60vh;
+    padding: 2%;
+}
+
+.showfeed__parent>div{
+    margin-bottom: 1%;
+   
+}
+
+.showfeed__parent>img{
+    width: 100%;
+    height: 50vh;
+}

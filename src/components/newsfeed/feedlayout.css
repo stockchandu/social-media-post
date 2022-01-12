@@ -1,0 +1,7 @@
+.feedlayout__parent{
+    width: 40vw;
+    border: 1px solid rgb(199, 196, 196);
+    height: 100vh;
+    overflow-y: scroll;
+    margin: auto;
+}
