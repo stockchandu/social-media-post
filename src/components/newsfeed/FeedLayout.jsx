@@ -1,5 +1,5 @@
-import "./feedlayout.css"
-import { NewsFeed } from "./NewsFeed"
+import "./feedlayout.css";
+import { NewsFeed } from "./NewsFeed";
 export const FeedLayout = () => {
     return (
         <>

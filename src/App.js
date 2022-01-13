@@ -1,5 +1,5 @@
 import './App.css';
-import { FeedLayout } from "./components/newsfeed/FeedLayout"
+import { FeedLayout } from "./components/newsfeed/FeedLayout";
 function App() {
   return (
     <>

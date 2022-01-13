@@ -1,30 +1,25 @@
-import "./userpostbox.css";
-import { useRef, useEffect, useState } from "react";
+import {  useState } from "react";
 import { GifSearch } from "./GifSearch";
 import { useDispatch, useSelector } from "react-redux";
 import { postLoading, postSuccess } from "../../redux/userpost/action";
-import { gifUrl } from "../../redux/gifstore/action"
+import { gifUrl } from "../../redux/gifstore/action";
+import "./userpostbox.css";
 
 export const UserPostBox = ({ handlepopup }) => {
     const userName = "Chandan";
     const [showGif, setGif] = useState(false);
-    const [userInput,setUserInput] = useState("")
-    const postInput = useRef(null);
+    const [userInput,setUserInput] = useState("");
     const dispatch = useDispatch();
     const { data: { gifurl } } = useSelector(store => store.gif);
 
-    // useEffect(() => {
-    //     postInput.current.focus()
-    // })
-
+    //toggle gif search input
     const handleGifSearch = () => {
         showGif ? setGif(false) : setGif(true);
     }
 
+    //it handle the user post
     const handleUserPost = () => {
-
         dispatch(postLoading(true));
-
         const payload={
             postname:userInput,
             usergifurl:gifurl
@@ -44,7 +39,7 @@ export const UserPostBox = ({ handlepopup }) => {
                 <hr />
 
                 <div className="createpost__input-box">
-                    <input type="text" placeholder={`Whats on your mind, ${userName}`} ref={postInput} onChange={(event)=>{setUserInput(event.target.value)}} />
+                    <input type="text" placeholder={`Whats on your mind, ${userName}`}  onChange={(event)=>{setUserInput(event.target.value)}} />
                 </div>
 
                 <div className="createpost__show-gif" style={gifurl === "" ? { display: "none" } : { display: "block" }}>
